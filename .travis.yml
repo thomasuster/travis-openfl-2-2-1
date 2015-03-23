@@ -5,9 +5,9 @@ install:
   - mkdir haxelib
   - haxelib setup haxelib
 
-  - haxelib install openfl 2.2.1
-  - haxelib install lime 2.0.1
-  - haxelib install format
+  - haxelib -notimeout install openfl 2.2.1
+  - haxelib -notimeout install lime 2.0.1
+  - haxelib -notimeout install format
 
   - git clone --recursive https://github.com/thomasuster/lime.git
   - cd lime
