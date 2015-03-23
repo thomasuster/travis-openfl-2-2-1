@@ -1,6 +1,10 @@
 language: objective-c
 
 install:
+  - sudo apt-get install g++-multilib gcc-multilib
+  - sudo apt-get install mesa-common-dev libgl1-mesa-dev libglu1-mesa-dev -y
+  - sudo apt-get install libgc-dev
+
   - brew install neko haxe
   - mkdir haxelib
   - haxelib setup haxelib
