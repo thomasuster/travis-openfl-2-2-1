@@ -5,34 +5,31 @@ install:
   - mkdir haxelib
   - haxelib setup haxelib
 
-  - git clone git@github.com:thomasuster/openfl.git
-  - cd openfl
-  - git checkout 201
-  - cd ..
+  - haxelib install openfl 2.2.1
+  - haxelib install lime 2.0.1
+  - haxelib install format
+
   - git clone --recursive git@github.com:thomasuster/lime.git
   - cd lime
   - git checkout 201
   - cd ..
-  - git clone https://github.com/haxenme/nme
-  - git clone https://github.com/haxenme/nme-dev
-  - git clone https://github.com/haxefoundation/hxcpp
 
-  - haxelib install lime 2.0.1
-  - haxelib install format
-  - haxelib dev openfl openfl
   - haxelib dev lime lime
 
   - haxelib run lime rebuild lime
   - haxelib run lime rebuild tools
 
+  - git clone https://github.com/haxenme/nme
+  - git clone https://github.com/haxenme/nme-dev
+  - git clone https://github.com/haxefoundation/hxcpp
   - haxelib dev nme nme
   - haxelib dev nme-dev nme-dev
   - haxelib dev hxcpp hxcpp
 
   - cd nme-dev/project
   - neko build.n
-
   - haxelib run lime rebuild hxcpp
   - haxelib run lime rebuild -Dlegacy
+  
 script:
   - openfl test mac
