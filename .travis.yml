@@ -9,7 +9,7 @@ install:
   - haxelib install lime 2.0.1
   - haxelib install format
 
-  - git clone --recursive git@github.com:thomasuster/lime.git
+  - git clone --recursive https://github.com/thomasuster/lime.git
   - cd lime
   - git checkout 201
   - cd ..
@@ -30,6 +30,6 @@ install:
   - neko build.n
   - haxelib run lime rebuild hxcpp
   - haxelib run lime rebuild -Dlegacy
-  
+
 script:
   - openfl test mac
