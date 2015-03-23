@@ -17,7 +17,7 @@ install:
 
   - haxelib dev lime lime
 
-  - haxelib run lime rebuild lime -64
+  - haxelib run lime rebuild lime mac -64
   - haxelib run lime rebuild tools
 
   - git clone https://github.com/haxenme/nme
